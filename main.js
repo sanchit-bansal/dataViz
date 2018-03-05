@@ -1,30 +1,67 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoicmFzYWd5LXB1YmxpYyIsImEiOiJjaXpxbmZnczYwMDE0MzNueWZ6azlkd3cyIn0.JP4-DTHPeFDz0aE1oQbIYg';
+mapboxgl.accessToken = 'pk.eyJ1IjoidmluZWV0cmVkZHkiLCJhIjoiY2pkeWcxOXl6MTMxczJ3cXAwYnJqbm05OSJ9.5HKKb0O8A-9ChhsXoW6LtA'
+
 
 var chapters = {
-    'part-1': {
-        center: [82.8, 23.88],
-        zoom: 3.5,
-        bearing: 0,
-        pitch: 0,
-    },
-    'part-2': {
-        center: [77.1016, 28.6375],
-        zoom: 10,
-        bearing: 0,
-        pitch: 0,
-    },
-    'part-3': {
-        center: [72.8561, 19.0022],
-        zoom: 11.1,
-        bearing: 0,
-        pitch: 52,
-    },
-    'part-4': {
-        center: [82.8, 23.88],
-        zoom: 4,
-        bearing: 0,
-        pitch: 0,
-    }
+  'part-1' : {
+center : [77.123,28.653],
+zoom : 10,
+bearing : 0,
+pitch : 1,
+},
+'part-2' : {
+center : [72.83333,18.96667],
+zoom : 11,
+bearing : -50,
+pitch : 55,
+},
+'part-3' : {
+center : [77.59796,12.96991],
+zoom : 11,
+bearing : 0,
+pitch : 1,
+},
+'part-4' : {
+center : [80.27,13.09],
+zoom : 11,
+bearing : 0,
+pitch : 1,
+},
+'part-5' : {
+center : [88.33778,22.54111],
+zoom : 4,
+bearing : 0,
+pitch : 1,
+},
+'part-6' : {
+center : [78.46667,17.36667],
+zoom : 4,
+bearing : 0,
+pitch : 1,
+},
+'part-7' : {
+center : [76.266935,9.901199],
+zoom : 4,
+bearing : 0,
+pitch : 1,
+},
+'part-8' : {
+center : [72.58,23.03],
+zoom : 4,
+bearing : 0,
+pitch : 1,
+},
+'part-9' : {
+center : [74.030543,15.29299],
+zoom : 4,
+bearing : 0,
+pitch : 1,
+},
+'part-10' : {
+center : [73.84778,18.52361],
+zoom : 4,
+bearing : 0,
+pitch : 1,
+}
 };
 
 var map;
@@ -32,7 +69,7 @@ var map;
 window.onload = function() {
     map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/rasagy-public/cjdyjowlk8yv42snnhqwpi648',
+        style: 'mapbox://styles/vineetreddy/cjdzvvresa7lr2snn9b9c66qf',
         center: [82.8, 23.88],
         zoom: 4,
         bearing: 0,
