@@ -10,7 +10,7 @@ var chapters = {
     },
 'part-1' : {
 center : [77.123,28.653],
-zoom : 10,
+zoom : 11.5,
 bearing : 0,
 pitch : 1,
 },
@@ -24,47 +24,48 @@ pitch : 50,
 center : [77.59796,12.96991],
 zoom : 11,
 bearing : 0,
-pitch : 20,
+pitch : 30,
 },
 'part-4' : {
 center : [80.27,13.09],
 zoom : 11,
-bearing : 0,
-pitch : 1,
+bearing : -80,
+pitch : 30,
 },
 'part-5' : {
 center : [88.33778,22.54111],
-zoom : 11,
-bearing : 0,
-pitch : 1,
+zoom : 12,
+bearing : 18,
+pitch : 30,
 },
 'part-6' : {
 center : [78.46667,17.36667],
-zoom : 11,
-bearing : 0,
+zoom : 12,
+bearing : 20,
 pitch : 1,
 },
 'part-7' : {
-center : [76.266935,9.901199],
-zoom : 11,
-bearing : 0,
-pitch : 1,
+// center : [76.266935,9.901199],
+center : [76.2673, 9.9312],
+zoom : 12,
+bearing : 50,
+pitch : 20,
 },
 'part-8' : {
 center : [72.58,23.03],
-zoom : 11,
+zoom : 12.2,
 bearing : 0,
 pitch : 1,
 },
 'part-9' : {
 center : [74.030543,15.29299],
-zoom : 11,
-bearing : 0,
+zoom : 11.3,
+bearing : 40,
 pitch : 1,
 },
 'part-10' : {
 center : [73.84778,18.52361],
-zoom : 11,
+zoom : 12.5,
 bearing : 0,
 pitch : 1,
 },
@@ -81,7 +82,7 @@ var map;
 window.onload = function() {
     map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/vineetreddy/cjeedflged58x2snrr49aq59i',
+        style: 'mapbox://styles/vineetreddy/cjeefz6tinr422snum9inzviq',
         center: [82.8, 23.88],
         zoom: 4,
         bearing: 0,
@@ -119,3 +120,11 @@ function isElementOnScreen(id) {
     var bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
+
+var popup = new mapboxgl.Popup({closeOnClick: false})
+    .setLngLat([78.9629,20.5937])
+    .setHTML('<h1>Hello World!</h1>')
+    .addTo(map);
+
+    var popup = new mapboxgl.Popup()
+    .setText('Construction on the Washington Monument began in 1848.');
