@@ -82,7 +82,7 @@ var map;
 window.onload = function() {
     map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/vineetreddy/cjeefz6tinr422snum9inzviq',
+        style: 'mapbox://styles/vineetreddy/cjeejipd541hn2rpuvmzto3l5',
         center: [82.8, 23.88],
         zoom: 4,
         bearing: 0,
