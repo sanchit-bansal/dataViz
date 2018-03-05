@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Fly to a location based on scroll position</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='secondary.js'></script>
+    <link href='secondary.css' rel='stylesheet' />
+</head>
+
+<style>
+#map {
+    position: fixed;
+    width:70%;
+}
+#features {
+    width: 30%;
+    margin-left: 70%;
+    font-family: sans-serif;
+    overflow-y: scroll;
+    background-color:#ffffff;
+}
+section {
+    padding:  12px 12px;
+    line-height: 20px;
+    border-bottom: 1px solid #ddd;
+    opacity: 0.75;
+    font-size: 13px;
+}
+section.active {
+    opacity: 1;
+}
+section:last-child {
+    border-bottom: none;
+    margin-bottom: 200px;
+}
+
+</style>
+
+
+<body>
+<div id='map'></div>
+<div id='features'>
+<section id="second" class="main special">
+	<header class="major">
+		<h2>Airport traffic vs Population ranking</h2>
+	</header>
+	<section id='part-0' class='active'>
+	     <img src='legend.png' width='100%' />
+	</section>
+	<section id='part-1'>
+	    <h3>1. Goa</h3>
+	    <img src='goa.jpg' width='100%' />
+	    <p>The Goa airport leads here with a ratio of <h4>5.9</h4> making it first in our list. The ratio is almost two times more than that of the next airport on this list.
+		</br>
+		<h3><i>Ratio </i>5.9 </h3>
+		</p>
+	</section>
+	<section id='part-2'>
+	    <h3>2. Kochi</h3>
+	    <img src='cochin.jpg' width='100%' />
+		<p>The Kochi airport is second with a ratio of 2.6!
+		</br>
+		<h3><i>Ratio </i>2.6 </h3>
+		</p>
+		
+	</section>
+	<section id='part-3'>
+	    <h3>3. Delhi</h3>
+	    <img src='delhi.jpg' width='100%' />
+	    <p>Delhi, our largest airport comes in at 3rd despite being the busiest airport in the country</br>
+			<h3><i>Ratio </i>2.28 </h3></p>
+	</section>
+	<section id='part-4'>
+	    <h3>4. Bombay</h3>
+	    <img src='mumbai.jpg' width='100%' />
+		<p>The Bombay airport comes in at fourth.</br>
+			<h3><i>Ratio </i>2.25</h3></p>
+		</section>
+	<section id='part-5'>
+	    <h3>5. Chennai</h3>
+	    <img src='chennai.jpg' width='100%' />
+	    <p>Chennai comes in at fifth.</br>
+			<h3><i>Ratio </i>2.2 </h3></p>
+	</section>
+	<section id='part-6'>
+	    <h3>Bangalore</h3>
+	    <img src='bengaluru.jpg' width='100%' />
+	    <p>Bangalore comes in at 6th. The ratio is same as that of Chennai but since Chennai's population was lower, we decided to place it higher on this list</br>
+			<h3><i>Ratio </i>2.2 </h3></p>
+	</section>
+	<section id='part-7'>
+	    <h3>Hyderabad</h3>
+	    <img src='hyd.jpeg' width='100%' />
+	    <p>Hyderabad clocks in at 7th. The ratio from here on falls sharply.</br>
+			<h3><i>Ratio </i>1.6</h3></p>
+	</section>
+	<section id='part-8'>
+	    <h3>8. Ahmedabad, Sardar Vallabhbhai Patel International Airport</h3>
+	    <img src='ahmed.jpg' width='100%' />
+	    <p>Ahmedabad comes in the same as our other list. No change here.</br>
+			<h3><i>Ratio </i>1.18 </h3></p></section>
+	<section id='part-9'>
+	    <h3>Pune</h3>
+	    <img src='pune.jpg' width='100%' />
+	    <p>Pune comes in at ninth.</br>
+			<h3><i>Ratio </i>1.17 </h3></p>
+	</section>
+	<section id='part-10'>
+	    <h3>Calcutta</h3>
+	    <img src='kolkata.jpg' width='100%' />
+	    <p>Despite being the fifth most busiest airport, Calcutta comes in last here because of its low ration. Interesting observation.</br>
+			<h3><i>Ratio </i>1.1 </h3></p></section>
+	<section id='part-11'>
+	    <h3>INDIA</h3>
+	    <p>With population over and about 125 crores,Not only our roads are full,Even the skies have joined the race.Airport authority of India operating about 125 airports and civil enclaves out of a total of 449 airports and airstrips located throughout India, releases the list of top 10 busiest airports of India which handled a total of 223.6 million passengers (168.9 m domestic and 54.7 m international) during 2015-16 (Apr-Mar)</p>
+	    <img src='legend.png' width='100%' />	
+	</section>
+
+</div>
+</body>
+</html>
