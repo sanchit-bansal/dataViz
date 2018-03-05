@@ -24,7 +24,7 @@ pitch : 50,
 center : [77.59796,12.96991],
 zoom : 11,
 bearing : 0,
-pitch : 1,
+pitch : 20,
 },
 'part-4' : {
 center : [80.27,13.09],
@@ -81,7 +81,7 @@ var map;
 window.onload = function() {
     map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/vineetreddy/cjdzvvresa7lr2snn9b9c66qf',
+        style: 'mapbox://styles/vineetreddy/cjeedflged58x2snrr49aq59i',
         center: [82.8, 23.88],
         zoom: 4,
         bearing: 0,
