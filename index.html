@@ -11,6 +11,78 @@
 </head>
 
 <style>
+
+button {
+  background: none;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  -webkit-box-shadow: inset 0 0 0 2px #f45e61;
+          box-shadow: inset 0 0 0 2px #f45e61;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;
+}
+button::before, button::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.spin {
+  width: 5em;
+  height: 5em;
+  padding: 0;
+}
+.spin:hover {
+  color: #0eb7da;
+}
+.spin::before, .spin::after {
+  top: 0;
+  left: 0;
+}
+.spin::before {
+  border: 2px solid transparent;
+}
+.spin:hover::before {
+  border-top-color: #0eb7da;
+  border-right-color: #0eb7da;
+  border-bottom-color: #0eb7da;
+  -webkit-transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.spin::after {
+  border: 0 solid transparent;
+}
+.spin:hover::after {
+  border-top: 2px solid #0eb7da;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  -webkit-transition: border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+  transition: border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s, -webkit-transform 0.4s linear 0s;
+}
+
+.circle {
+  border-radius: 100%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.circle::before, .circle::after {
+  border-radius: 100%;
+}
+
+
 #map {
     position: fixed;
     width:70%;
@@ -44,7 +116,7 @@ section:last-child {
 <div id='map'></div>
 <div id='features'>
 <section id="second" class="main special">
-	<header class="major">
+	<header class="major" position:"fixed">
 		<h2>Scrollable Visualisation of 10 busiest airports in India</h2>
 	</header>
 	<section id='part-0' class='active'>
@@ -134,10 +206,13 @@ In 2014 and 2015, Kolkata Airport won the title of Best Improved Airport in the 
 	<section id='part-11'>
 	    <h3>INDIA</h3>
 	    <p>With population over and about 125 crores,Not only our roads are full,Even the skies have joined the race.Airport authority of India operating about 125 airports and civil enclaves out of a total of 449 airports and airstrips located throughout India, releases the list of top 10 busiest airports of India which handled a total of 223.6 million passengers (168.9 m domestic and 54.7 m international) during 2015-16 (Apr-Mar)</p>
-	    <img src='legend.png' width='100%' />	<br><br><br><br><br><br><br><br>
+	    <img src='legend.png' width='100%' />	<br>
+	    _________________________________________________
+	    <center><a href="secondary.html" target="_blank"><button class="spin circle">Switch Map</button></a></center>
+		_________________________________________________
+		<br><br><br><br><br><br><br><br>
 	    <h2>Made with ❤ by <a href="https://github.com/preetha2711">Preetha Datta, </a><a href="https://github.com/sanbansal42">Sanchit Bansal, </a><a href="https://github.com/vineetred">Vineet Reddy </a>for <a href="https://classroom.google.com/u/0/c/MTE1NzQ0OTM1OTVa">Data Visualisation</a>.</p></h2>
 
-	    
 					
 	</section>
 

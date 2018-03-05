@@ -120,3 +120,4 @@ function isElementOnScreen(id) {
     var bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
+
