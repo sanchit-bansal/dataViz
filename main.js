@@ -70,10 +70,10 @@ bearing : 0,
 pitch : 1,
 },
 'part-11' : {
-    center : [78.9629,20.5937],
-    zoom : 4,
-    bearing : 0,
-    pitch : 0,
+center : [78.9629,20.5937],
+zoom : 4,
+bearing : 0,
+pitch : 0,
 },
 };
 
