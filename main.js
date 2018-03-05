@@ -17,7 +17,7 @@ pitch : 1,
 'part-2' : {
 center : [72.83333,18.96667],
 zoom : 11,
-bearing : 0,
+bearing : -60,
 pitch : 50,
 },
 'part-3' : {
