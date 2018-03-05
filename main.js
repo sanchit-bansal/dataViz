@@ -24,7 +24,7 @@ pitch : 50,
 center : [77.59796,12.96991],
 zoom : 11,
 bearing : 0,
-pitch : 1,
+pitch : 20,
 },
 'part-4' : {
 center : [80.27,13.09],
