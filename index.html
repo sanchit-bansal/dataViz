@@ -1,36 +1,176 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset='utf-8' />
-    <title>Fly to a location based on scroll position</title>
-    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
-    <script src='main.js'></script>
-    <link href='main.css' rel='stylesheet' />
-</head>
-<body>
-<div id='map'></div>
-<div id='features'>
-    <section id='part-1' class='active'>
-        <h3>Indira Gandhi International Airport, Delhi</h3>
-        <p>Passenger Traffic:
-           Best airport blah blah blah 
-        </p>
-    </section>
-    <section id='part-2'>
-        <h3><i>Chattrapaji Shivaji International Airport</i>, Mumbai</h3>
-        <img src='delhi.jpg' width='100%' />
-        <p>You can embed images and <strong>style</strong> <em>text</em> using html.</p>
-    </section>
-    <section id='part-3'>
-        <h3>Second insight</h3>
-        <p>You can tilt the camera using pitch.</p>
-    </section>
-    <section id='part-4'>
-        <h3>Conclusion</h3>
-        <p>Summary can zoom back to the original view.</p>
-    </section>
-</div>
-</body>
+	<head>
+		<title>airScroll</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+		<script src='main.js'></script>
+		<link href='main.css' rel='stylesheet' />
+		<script src='main.js'></script>
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+	<style>
+	#map {
+	    position: fixed;
+	    width:50%;
+	}
+	#features {
+	    width: 50%;
+	    margin-left: 50%;
+	    font-family: sans-serif;
+	    overflow-y: scroll;
+	    background-color: #fafafa;
+	}
+	section {
+	    padding:  25px 50px;
+	    line-height: 25px;
+	    border-bottom: 1px solid #ddd;
+	    opacity: 0.25;
+	    font-size: 13px;
+	}
+	section.active {
+	    opacity: 1;
+	}
+	section:last-child {
+	    border-bottom: none;
+	    margin-bottom: 200px;
+	}
+	</style>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>airScroll</h1>
+						<p>The Busiest 10 airports in India.<br />
+						built by <a href="https://github.com/preetha2711">Preetha Datta, </a><a href="https://github.com/sanbansal42">Sanchit Bansal, </a><a href="https://github.com/vineetred">Vineet Reddy </a>for <a href="https://classroom.google.com/u/0/c/MTE1NzQ0OTM1OTVa">Data Visualisation</a>.</p>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#second">Scrolling Map</a></li>
+							<li><a href="#cta">About us</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+						
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Scrollable Visualisation of 10 busiest airports in India</h2>
+								</header>
+								<section id='rank-1' class='active'>
+								    <h3>Indira Gandhi International Airport, Delhi</h3>
+								    <img src='delhi.jpg' width='100%' />
+								    <p>Indira Gandhi International Airport serves as the primary civilian aviation hub for the National Capital Region of Delhi. The airport, spread over an area of 5,106 acres is situated in Palam, 15 km (9.3 mi) south-west of the New Delhi railway station and 16 km (9.9 mi) from New Delhi city centre.
+Named after Indira Gandhi, a former Prime Minister of India, it is the busiest airport in India in terms of passenger traffic since 2009. It is also the busiest airport in the country in terms of cargo traffic.
+</p>
+								</section>
+								<section id='rank-2'>
+								    <h3>
+Chhatrapati Shivaji International Airport,Mumbai</h3>
+								    <p>You can tilt the camera using pitch.</p>
+								</section>
+								<section id='rank-3'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-4'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-5'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-6'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-7'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-8'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-9'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+								<section id='rank-10'>
+								    <h3>Conclusion</h3>
+								    <p>Summary can zoom back to the original view.</p>
+								</section>
+
+
+								<!-- Second Section <ul class="statistics">
+									<li class="style1">
+										<span class="icon fa-code-fork"></span>
+										<strong>5,120</strong> Etiam
+									</li>
+									<li class="style2">
+										<span class="icon fa-folder-open-o"></span>
+										<strong>8,192</strong> Magna
+									</li>
+									<li class="style3">
+										<span class="icon fa-signal"></span>
+										<strong>2,048</strong> Tempus
+									</li>
+									<li class="style4">
+										<span class="icon fa-laptop"></span>
+										<strong>4,096</strong> Aliquam
+									</li>
+									<li class="style5">
+										<span class="icon fa-diamond"></span>
+										<strong>1,024</strong> Nullam
+									</li>
+								</ul>
+							</section>-->
+								<p class="content"></p>
+							</section>
+
+						
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>About us</h2>
+									<p>What you see currently is the map of the busiest airports in India.</p>
+									<h2>About the Map</h2>
+									<p>What you see currently is the map of the busiest airports in India./p>
+									<
+								</header>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Made by <a href="https://github.com/preetha2711/airScroll">airScroll</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
