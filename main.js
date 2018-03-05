@@ -120,11 +120,3 @@ function isElementOnScreen(id) {
     var bounds = element.getBoundingClientRect();
     return bounds.top < window.innerHeight && bounds.bottom > 0;
 }
-
-var popup = new mapboxgl.Popup({closeOnClick: false})
-    .setLngLat([78.9629,20.5937])
-    .setHTML('<h1>Hello World!</h1>')
-    .addTo(map);
-
-    var popup = new mapboxgl.Popup()
-    .setText('Construction on the Washington Monument began in 1848.');
