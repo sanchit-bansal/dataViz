@@ -1,0 +1,8 @@
+<—————————————>
+
+<-IMPROVEMENTS->
+	*Use two colours to depict the different datasets
+	*Use a toggle switch to change between the two maps rather
+	 than a map switch.
+
+<—————————————>
