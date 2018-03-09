@@ -20,7 +20,7 @@ As you scroll down on the website on the right, the one with the write ups; the 
 The map is interactive in the sense that when you scroll down or up, the map correspondingly zooms in and out to the particular city.
  
  The scale used: 
- ![alt text](https://vineetred.github.io/dataViz/legend.png)
+ ![alt text](https://raw.githubusercontent.com/vineetred/dataViz/master/images/legend.png)
 
 We have looked at the map from the perspective of the number of people flying through that airport and compared it to the population of that city. The ratio of these two produced a very interesting result! We found that Goa has a very high ratio compared to the other cities! The interesting results are in the sidebar. Just because of the population coming in the picture, we see interesting observations. The data was based off the information we were given in the Mapbox workshop. We created a new dataset and uploaded it to Mapbox.
 
